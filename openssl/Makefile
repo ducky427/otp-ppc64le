@@ -22,7 +22,7 @@ $(SRC_DIR)/Makefile: $(SRC_DIR) $(DIST_DIR)
 	cd $(SRC_DIR) && ./Configure no-apps no-shared no-dso linux-$(TARGET_ARCH) --prefix=$(abspath $(DIST_DIR))
 
 default: $(SRC_DIR)/Makefile
-	$(MAKE) -j -C $(SRC_DIR) depend && $(MAKE) -j -C $(SRC_DIR) \
+	$(MAKE) -C $(SRC_DIR) depend && $(MAKE) -C $(SRC_DIR) \
 	CC=$(CC) \
 	RANLIB=$(RANLIB) && $(MAKE) -C $(SRC_DIR) install
 
