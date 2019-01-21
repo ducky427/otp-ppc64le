@@ -21,7 +21,8 @@ CONFIGURE_ARGS := --host=$(TARGET_ARCH) \
 --disable-dynamic-ssl-lib \
 --build=$(BUILD_ARCH) \
 --enable-native-libs \
---enable-static-nifs
+--enable-static-nifs \
+--without-javac
 
 LDFLAGS := "-L$(NCURSES_DIST_PATH)/lib -L$(OPENSSL_DIST_PATH)/lib -L/opt/at12.0/$(TARGET_ARCH)/lib64"
 LIBS := $(OPENSSL_STATIC_LIB)

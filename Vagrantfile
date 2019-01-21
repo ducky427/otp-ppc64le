@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
     yum update -y
     wget ftp://ftp.unicamp.br/pub/linuxpatch/toolchain/at/redhat/RHEL7/gpg-pubkey-6976a827-5164221b
     rpm --import gpg-pubkey-6976a827-5164221b
-    yum install advance-toolchain-at12.0-cross-ppc64le.x86_64 -y
+    yum install advance-toolchain-at12.0-cross-ppc64le.x86_64 autoconf automake -y
   SHELL
 
 end
